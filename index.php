@@ -15,7 +15,7 @@ if (file_exists("content.html") && time() - $CACHE_DURATION < $TIME_CACHE && $TI
 else {
     ob_start();
 
-$HOSTS = array("fb" => "Facebook",  "pascal" => "Pascal", "chic" => "Chic", "nile" => "Nile", "rodgers" => "Rodgers", "bernard" => "Bernard", "edwards" => "Edwards", "pas" => "Pas", "cal" => "Cal", "titan" => "Titan", "bigcountry" => "Big Country", "sledge" => "Sledge", "sister" => "Sister");
+$HOSTS = array("gammaumd13" => "gammaumd13", "gammaumd14" => "gammaumd14", "gammaumd15" => "gammaumd15", "gammaumd16" => "gammaumd16", "gammaumd17" => "gammaumd17",);
 $SHORT_GPU_NAMES = array("GeForce GTX TITAN X" => "Titan X Maxwell", "TITAN X (Pascal)" => "Titan X Pascal", "TITAN Xp" => "Titan Xp", "GeForce GTX 980" => "GTX 980", "Tesla P100-PCIE-16GB" => "Tesla P100", "GeForce RTX 2080 Ti" => "RTX 2080 Ti");
 $SHORTER_GPU_NAMES = array("GeForce GTX TITAN X" => "X Max", "TITAN X (Pascal)" => "X Pas", "TITAN Xp" => "Xp", "GeForce GTX 980" => "GTX 980", "Tesla K20m" => "K20m", "Tesla M2090" => "M2090", "Tesla P100-PCIE-16GB" => "P100", "GeForce RTX 2080 Ti" => "2080 Ti");
 $GPU_COLS_LIST = array("index", "uuid",   "name", "memory.used", "memory.total", "utilization.gpu", "utilization.memory", "temperature.gpu", "timestamp");

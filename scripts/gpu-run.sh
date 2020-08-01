@@ -20,11 +20,11 @@ if [ "$1" -eq "3" ]; then
         uptime >> $path/${HOST}_status.csv
         cp /tmp/local-usage.txt $path/${HOST}_local.txt
 
-        python /home/robert/gpuMonitor/gpu-processes.py $path/processes.csv > $path/${HOST}_users.csv
+        python /home/gamma/gpuMonitor/gpu-processes.py $path/processes.csv > $path/${HOST}_users.csv
         echo $(uptime | grep -o -P ': \K[0-9]*[,]?[0-9]*')\;$(nproc) > $path/${HOST}_cpus.csv
         tail -n 20 $path/gpus.csv > $path/${HOST}_gpus.csv
         tail -n 40 $path/processes.csv > $path/${HOST}_processes.csv
-        timeout 10 scp $path/${HOST}_* $2/web/robert/public_html/gpu/data
+        timeout 10 scp $path/${HOST}_* zhy@lrvrwks05:/home/zhy/Codes/gpu-monitor/data/
         sleep 10
     done
 fi
