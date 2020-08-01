@@ -6,6 +6,7 @@ $CACHE_DISABLED = false;
 
 $TIME_CACHE = filemtime("content.html");
 $TIME_COMMENT = filemtime("data/comments.json");
+date_default_timezone_set('America/New_York');
 
 if (file_exists("content.html") && time() - $CACHE_DURATION < $TIME_CACHE && $TIME_CACHE > $TIME_COMMENT && !isset($_POST["host"]) && !$CACHE_DISABLED) {
     if (!isset($_GET["content"]))
