@@ -25,7 +25,7 @@ else
 
 	if [ "${RESULT:-null}" = null ]; then
 		echo "Launch"
-		HOST=$1 /home/gamma/gpu-Monitor/scripts/gpu-run.sh 1 &
+		HOST=$1 /home/gamma/gpu-monitor/scripts/gpu-run.sh 1 &
 	else
 		echo "Running"
 	fi
@@ -34,7 +34,7 @@ else
 
 	if [ "${RESULT:-null}" = null ]; then
 		echo "Launch"
-		HOST=$1 /home/gamma/gpu-Monitor/scripts/gpu-run.sh 2 &
+		HOST=$1 /home/gamma/gpu-monitor/scripts/gpu-run.sh 2 &
 	else
 		echo "Running"
 	fi
@@ -43,7 +43,7 @@ else
 
 	if [ "${RESULT:-null}" = null ]; then
 		echo "Launch"
-		HOST=$1 /home/gamma/gpu-Monitor/scripts/gpu-run.sh 3 &
+		HOST=$1 /home/gamma/gpu-monitor/scripts/gpu-run.sh 3 &
 	else
 		echo "Running"
 	fi
