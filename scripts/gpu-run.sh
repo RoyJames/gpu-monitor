@@ -19,8 +19,8 @@ if [ "$1" -eq "3" ]; then
         #top -b -n 1 | grep %Cpu >> $path/${HOST}_status.csv
         nproc --all >> $path/${HOST}_status.csv
         uptime >> $path/${HOST}_status.csv
-	du -h -d 1 /home > /tmp/local-usage.txt
-        cp /tmp/local-usage.txt $path/${HOST}_local.txt
+	#du -h -d 1 /home > /tmp/local-usage.txt
+        #cp /tmp/local-usage.txt $path/${HOST}_local.txt
 
         python3 $script_root/gpu-processes.py $path/processes.csv > $path/${HOST}_users.csv
         echo $(uptime | grep -o -P ': \K[0-9]*[,]?[0-9]*')\;$(nproc) > $path/${HOST}_cpus.csv
